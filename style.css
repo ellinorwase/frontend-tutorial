@@ -1,0 +1,516 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+}
+
+p,
+li {
+  font-family: "Old Standard TT", serif;
+  font-size: 18px;
+}
+
+.img {
+  display: block;
+  width: auto;
+  height: 100px;
+  text-align: center;
+  position: fixed;
+}
+
+.button {
+  border-radius: 10%;
+  font-size: 10px;
+  padding: 5px;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.smal-img {
+  width: 200px;
+  height: auto;
+}
+
+.white-text {
+  color: white;
+}
+
+.img-form {
+  border-radius: 50%;
+}
+
+.animation {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  position: relative;
+  animation: mymove 5s infinite;
+}
+
+.animationcontainer {
+  min-height: 550px;
+}
+
+@keyframes mymove {
+  from {
+    top: 0px;
+    background: #0171bf;
+    width: 100px;
+    height: 100px;
+  }
+  to {
+    top: 250px;
+    background: #d44;
+    width: 200px;
+    height: 200px;
+  }
+}
+
+#backgroundColor {
+  height: 218px;
+}
+
+.border-red {
+  border: solid 2px red;
+}
+
+.border-dotted {
+  border: dotted 2px black;
+}
+
+.border-bottom {
+  border-bottom: solid 2px black;
+}
+
+.border-thick {
+  border: solid 10px black;
+}
+
+.font-times {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 2.5em;
+}
+
+.font-courier {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 2em;
+}
+
+.font-arial {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5em;
+}
+
+.font-cambria {
+  font-family: Cambria, Cochin, Georgia, Times, serif;
+  font-size: 1em;
+}
+
+.form {
+  font-family: "Raleway", sans-serif;
+  color: black;
+  border-radius: 5px;
+  border: 2px solid black;
+  padding: 5px;
+  margin: 10px auto;
+  text-align: center;
+  display: block;
+}
+
+iframe {
+  width: 600px;
+  height: auto;
+}
+
+.link-style {
+  color: #0171bf;
+}
+
+.FTHEM {
+  text-align: center;
+  background-color: rgb(0, 0, 0);
+  padding: 60px;
+  font-family: "Old Standard TT", serif;
+  margin: auto;
+  color: indigo;
+  font-size: 40px;
+}
+
+.FTX {
+  text-align: center;
+  background-image: linear-gradient(-90deg, #eb47bd, #000, #eb47bd);
+  padding: 60px;
+  font-family: "Old Standard TT", serif;
+  margin: auto;
+  color: #eb47bd;
+  font-size: 40px;
+}
+
+.FTH {
+  text-align: center;
+  color: #d9d9d9;
+  padding: 60px;
+  font-family: "Old Standard TT", serif;
+  margin: auto;
+  background-image: linear-gradient(-90deg, #fff, #e44d26, #fff);
+  font-size: 40px;
+}
+
+.FTJ {
+  text-align: center;
+  color: #000000;
+  padding: 60px;
+  font-family: "Old Standard TT", serif;
+  margin: auto;
+  background-image: linear-gradient(-90deg, #000, #f7df1e, #000);
+  font-size: 40px;
+}
+
+.FTC {
+  text-align: center;
+  color: #d9d9d9;
+  padding: 60px;
+  font-family: "Old Standard TT", serif;
+  margin: auto;
+  background-image: linear-gradient(-90deg, #fff, #0171bf, #fff);
+  font-size: 40px;
+}
+
+nav,
+label.burgermenu {
+  text-align: center;
+  background-color: rgba(142, 142, 142, 0.438);
+  padding: 30px;
+  display: block;
+}
+
+nav > a {
+  text-align: center;
+  padding: 12px 30px 12px 30px;
+  text-decoration: none;
+  color: #000;
+  font-size: 20px;
+  display: block;
+}
+
+nav a:hover {
+  color: rgb(190, 42, 42);
+}
+
+.active {
+  color: rgb(255, 255, 255);
+}
+
+.main-content {
+  text-align: center;
+  height: auto;
+  padding: 35px;
+}
+
+footer {
+  background-color: rgb(216, 216, 216, 0.27);
+  padding: 20px;
+  text-align: center;
+}
+
+video {
+  width: 650px;
+  height: auto;
+}
+
+.xd-tutorial {
+  width: fit-content;
+  margin: auto;
+  text-align: left;
+  margin-bottom: 50px;
+}
+
+.hnav a:hover {
+  color: indigo;
+}
+
+.xdnav a:hover {
+  color: #eb47bd;
+}
+
+.htmlnav a:hover {
+  color: #e44d26;
+}
+
+.cssnav a:hover {
+  color: #0171bf;
+}
+
+.jnav a:hover {
+  color: #f7df1e;
+}
+
+.video-text {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: auto 50px auto 50px;
+  width: auto;
+  padding: 30px 0 30px;
+  font-size: 16px;
+}
+
+.heading-xd {
+  margin: 0 70px 0 70px;
+}
+
+.h2-lista {
+  text-align: center;
+}
+
+.xd-tutorial > ul > li {
+  text-align: left;
+  padding-right: 40px;
+  list-style-type: disc;
+  margin: 0 60px 0 80px;
+  list-style-position: initial;
+}
+
+.pipett {
+  width: 20px;
+  height: auto;
+  margin: 0px;
+}
+
+.prototyp {
+  width: 700px;
+  height: auto;
+}
+
+.startsida {
+  background-image: url(images/code.jpg);
+}
+
+.hem-vid {
+  width: 100vh;
+  height: auto;
+  padding: 40px;
+  opacity: 0.85;
+  border: groove;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+footer > p > a {
+  text-decoration: none;
+  color: black;
+  font-size: 21px;
+}
+
+footer > p > a:hover {
+  text-decoration: none;
+  color: #6b5b95;
+}
+
+.faces {
+  display: none;
+}
+
+.code,
+.result {
+  text-align: left;
+  background-color: #fff;
+}
+
+.col {
+  display: table-cell;
+  width: 50%;
+  background-color: #fff;
+}
+
+.col-container {
+  display: table;
+  width: 100%;
+  border-spacing: 5px;
+}
+
+.explanation {
+  text-align: left;
+  color: rgb(0, 0, 0);
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.code {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.subject {
+  padding: 5px;
+  background-image: url(images/marmor2.jpg);
+  border-radius: 1%;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
+.subject h2,
+.subject p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.bonus:hover {
+  background-color: #000;
+}
+
+.runcode:hover {
+  background-color: #3d3;
+}
+
+.bonus,
+.runcode {
+  width: fit-content;
+  padding: 10px;
+  background-color: #1b1;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.challenge {
+  display: none;
+}
+
+canvas {
+  background-color: #fff;
+}
+
+.codefield {
+  width: 100%;
+  border-color: #0ee;
+}
+
+/* Hamburgar-knapp */
+#burgerbutton {
+  display: none;
+}
+#burgermenu {
+  display: none;
+}
+#burgerbutton:checked ~ #burgermenu {
+  display: block;
+}
+/* Hamburgar-knapp */
+
+.border {
+  border: #000 1px solid;
+}
+
+@media (max-width: 800px) {
+  .main-content {
+    padding: 0;
+    margin-top: 30px;
+  }
+
+  .col {
+    display: block;
+    margin: 5px 0;
+    width: 100%;
+    overflow: auto;
+  }
+  canvas.bonuscanvas {
+    width: 100%;
+  }
+
+  .video {
+    width: 300px;
+  }
+  .prototyp {
+    display: none;
+  }
+  img {
+    margin: 10px;
+    z-index: 10;
+  }
+  .xd-tutorial > ul > li {
+    text-align: left;
+    margin: 0px;
+  }
+
+  iframe {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+  }
+
+  .img {
+    display: block;
+    width: auto;
+    height: 60px;
+    position: fixed;
+    text-align: center;
+  }
+  .hem-vid {
+    width: 300px;
+    height: auto;
+    padding: 20px;
+    opacity: 0.85;
+    border: groove;
+  }
+}
+
+/* Hamburgar-knapp */
+@media (min-width: 800px) {
+  nav > a {
+    display: inline;
+  }
+  #burgermenu {
+    display: block;
+  }
+  label.burgermenu {
+    display: none;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+img {
+  margin: 10px;
+}
+
+.clearfix {
+  clear: both;
+  overflow: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+blockquote {
+  font-family: "Old Standard TT", serif;
+}
+
+.padding,
+li,
+ul,
+ol > * {
+  padding-top: 16px;
+  text-align: center;
+  list-style-position: inside;
+}
+
+.padding-ex2 > p {
+  padding: 1px;
+  margin-top: 1px;
+  margin-bottom: 1px;
+}
+
+.padding-ex1 {
+  padding: 20px;
+}
+
+.padding-ex1 > h4,
+.padding-ex1 > h3 {
+  padding: 20px;
+}

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Old+Standard+TT" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Old+Standard+TT" rel="stylesheet">
+</head>
+<body>
+    
+    <a href="#top"><img class="img" src="./images/css.png" alt="css"></a>
+    <h1 class="FTC">Frontend Tutorials</h1>
+    <input type="checkbox" id="burgerbutton"> <label class="burgermenu" for="burgerbutton">&#9776;</label>
+    <nav class="cssnav" id="burgermenu">
+        <a href="./index.html">Hem</a> &bull;
+        <a href="./adobex.html">Adobe Xd</a> &bull;
+        <a href="./html.html">HTML5</a> &bull;
+        <a class="active" href="./css.html">CSS</a> &bull;
+        <a href="./javascript.html">Javascript</a>
+    </nav>
+    <div class="main-content">
+
+        <h1>CSS - Tutorial</h1>
+        <h2>Cascading Stylee Sheet</h2>
+        <hr>
+        <p>
+            På den här sidan kommer vi gå igenom lite grunder i CSS och vad man kan göra.
+            Det är ett språk som ändrar utseende på en webbsida skriven i ett markup språk t.ex HTML. Nedan kan du lära
+            dig hur man ändrar
+            färg, byter placering på något, ändrar form på ett objekt etc.
+            Man kan skriva CSS på tre olika sätt inline, external, internal. 
+        </p>
+        <div> 
+            <br>
+            <p>
+                Vad din html-fil bör innehålla:
+            </p>
+            <div class="code border">
+   &lt;!DOCTYPE html&gt;
+   &lt;html lang="en"&gt;
+   &lt;head&gt;
+      &lt;meta charset="UTF-8"&gt;
+      &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+      &lt;meta http-equiv="X-UA-Compatible" content="ie=edge"&gt;
+      &lt;title&gt;Document&lt;/title&gt;
+     <span style="color:blue;"> &lt;link rel="stylesheet" href="style.css"&gt; Detta är external stylesheet </span> 
+      &lt;/head&gt;
+   &lt;body&gt;
+      <span style="color:blue;">&lt;style &gt; Detta är internal CSS&lt;/style&gt;</span>
+     <span style="color:blue;"> &lt;h1 style="color:blue;" &gt; Detta är inline CSS&lt;/h1&gt; </span> 
+   &lt;/body&gt;
+   &lt;/html&gt;
+            </div>
+<br>
+            <p>
+                Det är rekomenderat att använda external stylesheet. 
+            </p>
+        </div>
+        </div>
+
+       
+        <section class="subject">
+            <div class="explanation">
+                <h2>Ändra bakgrundsfärg</h2>
+                <p>Med CSS kan man ändra färger på backgrunden. Testa att trycka på knapparna nedan för att ändra backgrundsfärgen på rutan nedan.</p>
+
+            </div>
+            <hr>
+            <div class="col-container">
+                <div class="code col">
+                    <p>
+    div{
+        background-color: <span id="codeColor">white</span>;
+    }
+                    </p>
+
+                </div>
+                <div id="backgroundColor" class="result col">
+                    <button class="button" id="0"> <b>Tryck för röd bakgrund </b></button>
+                    <button class="button" id="1"> <b>Tryck för grön bakgrund</b> </button>
+                    <button class="button" id="2"> <b>Tryck för blå bakgrund</b> </button>
+                </div>
+            </div>
+            <br class="clearfix">
+        </section>
+
+        <section class="subject">
+            <div class="explanation">
+                <h2>Borders</h2>
+                <p>Med egenskapen <i>border</i> kan du betona eller rama in text eller objekt. Nedan kan du se olika exempel på borders.   </p>
+            </div>
+            <hr>
+            <div class="col-container">
+                <div class="code col">
+                    <p>
+    .border-red{
+        border: solid 2px red;
+    }
+    .border-dotted{
+        border: dotted 2px black;
+    }
+    .border-bottom{
+        border-bottom: solid 2px black;
+    }
+    .border-thick{
+        border: solid 10px black;
+    }
+                    </p>
+
+                </div>
+                <div class="result col">
+                    <br>
+                    <p class="border-red">
+                        Detta är en röd border runt hela.
+                    </p>
+                    <br>
+                    <p class="border-dotted">
+                        Detta är en border med prickar.
+                    </p>
+                    <br>
+                    <p class="border-bottom">
+                        Detta är en border som endast är under texten.
+                    </p>
+                    <br>
+                    <p class="border-thick">
+                        Detta är en border som är tjockare.
+                    </p>
+
+                </div>
+
+            </div>
+            <br class="clearfix">
+        </section>
+
+        <section class="subject">
+            <div class="explanation">
+                <h2>Ändra Font</h2>
+                <p>Med egenskapen <i>font-family</i> kan man ändra font i CSS. Egenskapen <i>font-size</i> 
+                    ändrar storleken på texten. Man kan bland annat använda em eller px (pixlar). Om man skriver t.ex 2em betyder det att den kommer bli två gånger större än orginaltexten, medans 2px betyder att texten kommer bli två pixlar stor.
+                 </p>
+
+            </div>
+            <hr>
+            <div class="col-container">
+                <div class="code col">
+                    <p>
+    .font-times{
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 2.5em;
+    }
+    .font-courier{
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 2em;
+    }
+    .font-arial{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.5em;
+    }
+    .font-cambria{
+        font-family: Cambria, Cochin, Georgia, Times, serif;
+        font-size: 1em;
+    }
+                    </p>
+                </div>
+                <div  class="result col">
+
+                    <p class="font-times">
+                        Times new roman
+                    </p>
+                    <br>
+                    <p class="font-courier">
+                        Courier new
+                    </p>
+                    <br>
+                    <p class="font-courier">
+                        Arial
+                    </p>
+                    <br>
+                    <p class="font-cambria">
+                        Cambira
+                    </p>
+
+                </div>
+            </div>
+            <br class="clearfix">
+        </section>
+
+        <section class="subject">
+            <div class="explanation">
+                <h2>Ändra Placering || Float</h2>
+                <p>Med egenskapen <i>float</i> kan man ändra position på innehållet på sidan.
+                Nedan ser du hur den ena texten är vänsterplacerad  och andra texten är högerplacerad. </p>
+
+            </div>
+            <hr>
+            <div class="col-container">
+                <div class="code col">
+                    <p>
+    .left {
+        float: left;
+    }
+    .right {
+       float: right;
+    }
+</p>
+                </div>
+                <div class="result col">
+                    <p class="left">
+                        Float left
+                    </p>
+
+                    <p class="right">
+                        Float right
+                    </p>
+
+                    <br class="clearfix">
+                </div>
+            </div>
+        </section>
+
+        <section class="subject">
+            <div class="explanation">
+                <h2>Ändra Form</h2>
+                <p>Med egenskapen <i>border-radius</i> kan man ändra form på t.ex en bild</p>
+
+            </div>
+            <hr>
+            <div class="col-container">
+                <div class="code col">
+                    <p>
+    .img-form{
+        border-radius: <span id="radiusspan">0</span>%;
+    }
+                    </p>
+                </div>
+                <div class="result col">
+                    <p>Tryck på bilden för att ändra form</p>
+                    <img class="smal-img" src="./images/flower.jpg" id="radiusimage" alt="picture">
+
+                    <br class="clearfix">
+                </div>
+            </div>
+        </section>
+
+        <section class="subject">
+            <div class="explanation">
+                <h2>Animering</h2>
+                <p>I exemplet nedan har vi gett en div ett animation-attribut. Den tar en @keyframes: "mymove", en tidsperiod "5s" och hur många gånger animationen ska köras "infinite".</p>
+                <p>Med attributet <i>@keyframes</i> kan man animera i CSS. Det fungerar genom att man anger elementets start- och slutegenskaper: t.ex "starta som grön och sluta som blå".</p>
+
+            </div>
+            <hr>
+            <div class="col-container">
+                <div class="code col">
+        <p>      
+    .animation {
+        width: 100px;
+        height: 100px;
+        border-radius: <span id="animationradius">100</span>%;
+        background: #0171bf;
+        position: relative;
+        animation: mymove 5s infinite;
+    }
+    @keyframes mymove {
+        from {
+          top: 0px;
+          background: #0171bf;
+        }
+        to {
+          top: 400px;
+          background: #d44;
+        }
+      }
+        </p>
+                </div>
+                <div class="result col animationcontainer">
+                    <input type="number" id="ballradius">
+                    <button class="button" id="animationbutton">Ändra border-radius</button>
+                    <p class="white-text">
+                        hej
+                    </p>
+                    <div class="animation" id="balldiv"></div>
+                </div>
+            </div>
+            <br>
+        </section>
+
+   
+    <footer>
+            <p>Copyright &copy; 2019 &bull; <a href="https://www.linkedin.com/in/frida-schoultz-683162172/" target = _blank>Frida,</a> <a href="https://www.linkedin.com/in/ellinor-vase-38075716b/" target = _blank> Ellinor,</a> <a href="https://www.linkedin.com/in/anna-zetterstr%C3%B6m-585259b0/" target = _blank>Anna,</a> <a href="https://www.linkedin.com/in/niklas-silfverhielm-58554116b/" target = _blank>Niklas</a></p>
+    </footer>
+
+
+    <script src="css.js"></script>
+
+</body>
+
+</html>

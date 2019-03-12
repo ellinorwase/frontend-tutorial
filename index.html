@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Hem</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Old+Standard+TT"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Old+Standard+TT"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <a href="#top"><img class="img" src="./images/wifi.png" alt="index"/></a>
+    <h1 class="FTHEM startsida">Frontend Tutorials</h1>
+    <input type="checkbox" id="burgerbutton" />
+    <label class="burgermenu" for="burgerbutton">&#9776;</label>
+    <nav class="hnav" id="burgermenu">
+      <a class="active" href="./index.html">Hem</a> &bull;
+      <a href="./adobex.html">Adobe Xd</a> &bull;
+      <a href="./html.html">HTML5</a> &bull; <a href="./css.html">CSS</a> &bull;
+      <a href="./javascript.html">Javascript</a>
+    </nav>
+
+    <div class="hem-sida">
+      <div class="main-content">
+        <br />
+        <h1>Välkommen!</h1>
+
+       
+
+        
+            <video class="hem-vid" loop autoplay muted>
+                <source src="images/Scrolling-kod2.mov"  />
+            </video>
+
+        <p>
+          På denna hemsida hjälper vi dig att lära dig grunderna i Adobe Xd,
+          HTML5, CSS och Javascript.
+        </p>
+        <br>
+        <audio controls>
+          <source src="audio/Froggs.mp3" type="audio/mpeg" />
+        </audio>
+        <br />
+        <canvas id="movingstuff" width="300" height="150"></canvas>
+        <h2>
+          Vi som står för denna vackra hemsida ser ni i den animerade bilden
+          ovan. <br />
+        </h2>
+        <p>
+          <i
+            >Klicka på bilderna eller på våra namn längst ner på sidan för att komma vidare till respektive
+            LinkedIn.</i
+          >
+        </p>
+        <br />
+        <h3>För frågor:</h3>
+        <br />
+        <h2>Kontakta oss</h2>
+        <form name="contact" method="POST" data-netlify="true">
+          <input
+            class="form formmedia"
+            type="text"
+            name="name"
+            placeholder="Namn"
+          />
+
+          <input
+            class="form formmedia"
+            type="email"
+            name="email"
+            placeholder="E-post"
+            required
+          />
+
+          <textarea
+            class="form formmedia"
+            name="message"
+            cols="50"
+            rows="10"
+            placeholder="Meddelande"
+          ></textarea>
+
+          <input class="form formmedia" type="submit" value="Skicka" />
+        </form>
+
+        <h2>Ni hittar oss här</h2>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2034.2648204780057!2d18.021237551560194!3d59.34522718157441!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f9d9cd12a90e3%3A0x5d507840ccf1f4a3!2sTomtebodav%C3%A4gen+3A%2C+171+65+Solna!5e0!3m2!1sen!2sse!4v1542813956801"
+          width="600"
+          height="450"
+          style="border:0"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+
+    <img src="images/anna.jpg" id="anna" class="faces" alt="Anna" />
+    <img src="images/frida.jpg" id="frida" class="faces" alt="Frida" />
+    <img src="images/ellinor.jpg" id="ellinor" class="faces" alt="Ellinor" />
+    <img src="images/niklas.jpg" id="niklas" class="faces" alt="Niklas" />
+    <footer>
+      <p>Copyright &copy; 2019 &bull; <a href="https://www.linkedin.com/in/frida-schoultz-683162172/" target = _blank>Frida,</a> <a href="https://www.linkedin.com/in/ellinor-vase-38075716b/" target = _blank> Ellinor,</a> <a href="https://www.linkedin.com/in/anna-zetterstr%C3%B6m-585259b0/" target = _blank>Anna,</a> <a href="https://www.linkedin.com/in/niklas-silfverhielm-58554116b/" target = _blank>Niklas</a></p>
+    </footer>
+    <script src="froggs.js"></script>
+    
+  </body>
+</html>

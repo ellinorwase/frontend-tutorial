@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Javascript</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Old+Standard+TT" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Old+Standard+TT" rel="stylesheet">
+
+</head>
+
+<body>
+    <a href="#top"><img class="img" src="./images/js.png" alt="js"></a>
+    <h1 class="FTJ">Frontend Tutorials</h1>
+    <input type="checkbox" id="burgerbutton"> <label class="burgermenu" for="burgerbutton">&#9776;
+    </label>
+    <nav class="jnav" id="burgermenu">
+        <a href="./index.html">Hem</a> &bull;
+        <a href="./adobex.html">Adobe Xd</a> &bull;
+        <a href="./html.html">HTML5</a> &bull;
+        <a href="./css.html">CSS</a> &bull;
+        <a class="active" href="./javascript.html">Javascript</a>
+    </nav>
+    <div class="main-content">
+        <h1>Javascript - Tutorial</h1>
+        <h2>Måla och animera i canvas med JS</h2>
+        <hr>
+        <br>
+        <p>
+            På den här sidan kommer vi gå igenom hur man målar enkla geometriska figurer i canvaselementet med hjälp av javascript. Sedan kommer vi skapa sammansatta figurer med hjälp av objekt. Slutligen kommer vi gå igenom hur man flyttar figurerna över canvasen.
+        </p>
+        <div> <!--  bör ha någon css, vet inte vad riktigt... -->
+            <p>
+                Vad din html-fil bör innehålla:
+            </p>
+            <div class="code border">
+   &lt;!DOCTYPE html&gt;
+   &lt;html lang="en"&gt;
+   &lt;head&gt;
+      &lt;meta charset="UTF-8"&gt;
+      &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+      &lt;meta http-equiv="X-UA-Compatible" content="ie=edge"&gt;
+      &lt;title&gt;Document&lt;/title&gt;
+   &lt;/head&gt;
+   &lt;body&gt;
+      &lt;canvas id="myCanvas"&gt;&lt;/canvas&gt;
+      &lt;script src="paintoncanvas.js"&gt;&lt;/script&gt;
+   &lt;/body&gt;
+   &lt;/html&gt;
+            </div>
+
+            <p>Om du använder den här html-koden så kan du skriva din kod i en annan fil som du sparar som paintoncanvas.js i samma map som html-filen. Du kan även skriva kod direkt i exemplen nedan.</p>
+        </div>
+
+        <section class="subject">
+            <div class="explanation">
+                <h2>Hämta canvas-referensen och måla en kvadrat</h2>
+                <p>
+                    För att måla i canvaselementet med JS kan man anropa metoden getContext('2d'). 
+                    Den returnerar ett js-object (canvasreferensen) som bland annat låter användaren måla olika geometriska figurer. 
+                    Det här kodexemplet visar hur man använder canvasreferensen för att måla en kvadrat i en canvas.
+                </p>
+                <p>
+                    <b>Det går ändra i koden nere till vänster.</b>
+                </p>
+                <p>
+                    Testa att avkommentera (= ta bort snedsträcken före koden) de två sista raderna i exemplet. 
+                    Det går att göra flera rektanglar på samma canvas.
+                </p>
+                <p>
+                    Kolla på koden och fundera på om du kan göra tre rektanglar: en gul, en röd och en orange?
+                </p>
+            </div>
+            <hr>
+            <div class="col-container">
+                <div class="col">
+                    <p>Kod:</p>
+                    <textarea  spellcheck="false" class="code codefield" rows="20">
+   //hämtar canvasen från dokumentet
+   let rectcanvas = document.getElementById('rectcanvas');
+
+   //Hämtar canvasreferensen
+   let squarereference = rectcanvas.getContext('2d');
+
+   //Den här metoden tar bort canvasens innehåll.
+   //Vi pratar mer om den i senare exempel.
+   squarereference.clearRect(0,0,300,150);
+ 
+   let xstart = 20, ystart = 20, xsize = 20, ysize = 60;
+
+   //väljer färg:
+   squarereference.fillStyle = 'orange';
+
+   //Skapar rektangeln
+   squarereference.fillRect(xstart, ystart, xsize, ysize);
+
+   //squarereference.fillStyle = 'red';
+   //squarereference.fillRect(100, 50, 50, 50);
+
+                    </textarea>
+                    <button id="b1" class="runcode">Kör kod</button>
+                </div>
+                <div class="result col">
+                    <p>Resultat:</p>
+                    <canvas id="rectcanvas" class="border"></canvas>
+                </div>
+            </div>
+            <hr class="clearfix">
+            <div class="explanation">
+                <p>
+                    Observera att det här kodexemplet förutsätter att det finns ett canvaselement med id: 'rectcanvas' i html-filen.
+                </p>
+                <p>
+                    Det är en bra idé att göra den här biten i vs code så att man ser att den funkar.
+                    Testa att byta värden på xstart, ystart, xsize och ysize och kolla vad som händer. 
+                    Testa även att byta färg (det går bra att använda hexkoder också).
+                </p>
+                <button id='1' class='bonus'>
+                    Tryck här för bonus level!
+                </button>
+                <div id='challenge1' class='challenge'>
+                    <p>
+                        Försök bygga den här snubben:
+                    </p> 
+                    <canvas id='face' width="100" height="100" class="bonuscanvas"></canvas>
+                </div>
+            </div>
+
+        </section>
+
+        
+        <section class="subject">
+            <div class="explanation">
+                <h2>Måla cirklar, cirkelsektioner och linjer</h2>
+                <p>
+                    Det finns flera metoder för att rita linjer och kurvor i canvasreferensen. 
+                    De metoder som vi kommer använda för att dra linjer i det här exemplet är moveTo, lineTo och arc. 
+                    För att rita linjer och fylla i figurer kommer vi använda stroke och fill.
+                </p>
+            </div>
+            <hr>
+            <div class="col-container">
+                <div class="col">
+                    <p>Kod:</p>
+                    <textarea spellcheck="false" class="code codefield" rows="35">
+   //fyrkant
+   let circleCanvas = document.getElementById('circleCanvas');
+   circlereference = circleCanvas.getContext('2d');
+   circlereference.clearRect(0,0,300,150)
+
+   //Startar en ny kurva/linje
+   circlereference.beginPath();
+
+   //Sätter ner "pennan" i punkten (20,10)
+   circlereference.moveTo(20,10);
+
+   //Drar en linje från den tidigare punkten, (20,10), till (40,30)
+   circlereference.lineTo(40,30);
+
+   circlereference.lineTo(20,50);
+   circlereference.lineTo(0,30);
+   circlereference.lineTo(20,10);
+
+   //Väljer färg för att linjer
+   circlereference.strokeStyle = 'green';
+
+   //Målar ut linjerna till figuren
+   circlereference.stroke();
+
+   //Halvcirkel
+   circlereference.beginPath();
+
+   //Gör en cirkelbåge runt punkten (70,30) med radien 
+   circlereference.arc(70,30,20,0,Math.PI/2);
+   circlereference.lineTo(70,30);
+   circlereference.lineTo(90,30);
+   circlereference.fillStyle = 'orange';
+   circlereference.fill();
+                    </textarea>
+                    <button id="b2" class="runcode">Kör kod</button>
+
+                </div>
+                <div class="result col">
+                    <p>Resultat:</p>
+                    <canvas class="border" id="circleCanvas"></canvas>
+                </div>
+            </div>
+            <hr class="clearfix">
+            <div class="explanation">
+                <p>
+                    Det är en del nya grejer i det här exemplet så vi får bryta ner det. 
+                    beginPath låter användaren starta en ny linje/kurva. 
+                    MoveTo sätter ut en punkt som man ritar från. 
+                    lineTo drar en linje från punkten man befinner sig i till den punkten som anges i lineTo:s argument. 
+                    Det är alltså en lämplig metod för att måla figurer med raka linjer.
+                </p>
+                <p>
+                    Metoden stroke används för att måla upp linjerna till figuren medan fill används för att fylla i figuren med färg. 
+                </p>
+                <button id='2' class='bonus'>
+                    Tryck här för bonus level!
+                </button>
+                <div id='challenge2' class="challenge">
+                    <p>
+                        Testa att bygga något sånt här:
+                    </p> 
+                    <canvas id='crown' width="100" height="100" class="bonuscanvas"></canvas>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="subject">
+            <div class="explanation">
+                <h2>Gruppera figurer med hjälp av objekt</h2>
+                <p>
+                    När man vill måla upp en figur flera gånger - t.ex när man animerar eller gör spel - så är det smidigt att gruppera figurer med objekt. 
+                    Detta gör att man t.ex kan ange ett x-, och y-värde till objektet för att måla upp en figur på de koordinaterna. Såhär kan det se ut:
+                </p>
+            </div>
+            <hr>
+            <div class="col-container">
+                <div class="col">
+                    <p>Kod:</p>
+                    <textarea spellcheck="false" class="code codefield" rows="35">
+dudereference = document.getElementById('dudecanvas').getContext('2d');
+dudereference.clearRect(0,0,300,150);
+
+function Dude(x, y){
+    this.x = x;
+    this.y = y;
+    this.width = 20;
+    this.height = 60;
+    this.draw = function(){
+        dudereference.fillStyle = 'pink';
+        dudereference.beginPath();
+        dudereference.arc(this.x+this.width/2, this.y+this.height/8, this.height/8, 0, 2*Math.PI);
+        dudereference.fill();
+        dudereference.fillRect(this.x, this.y+this.height/4, this.width, this.height/2);
+        dudereference.fillRect(this.x-this.width/4-1, this.y+this.height/4, this.width/4, this.height/3);
+        dudereference.fillRect(this.x+this.width+1, this.y+this.height/4, this.width/4, this.height/3);
+        dudereference.fillRect(this.x, this.y+this.height/4*3, this.width/3, this.height/4);
+        dudereference.fillRect(this.x+this.width/3*2, this.y+this.height/4*3, this.width/3, this.height/4);
+    }
+}
+let dude = new Dude(20,20);
+for(let i=0;i&lt;5;i++){
+    dude.draw();
+    dude.x += 40;
+    dude.y += 20;
+}
+                    </textarea>
+                    <button id="b3" class="runcode">Kör kod</button>
+                </div>
+                <div class="result col">
+                    <p>Resultat:</p>
+                    <canvas id="dudecanvas" class="border bonuscanvas"></canvas>
+                </div>
+            </div>
+            <hr class="clearfix">
+            <div class="explanation">
+                <p>
+                    I koden skapas objektet 'dude' en gång och sedan anropas dess metod 'draw' 5 gånger.
+                </p>
+                <p>
+                    Man kan ge objekt massa olika egenskaper för att måla på olika sätt som t.ex hastighet i x- och y-led, rotationsvinkel på armar och ben, färg och mycket mer. 
+                    Testa gärna att lägga till en egenskap 'color' för att ändra färg på gubbarna.
+                </p>
+                <button id='3' class='bonus'>
+                    Tryck här för bonus level!
+                </button>
+                <div id='challenge3' class='challenge'>
+                    <p>
+                        Ge objektet i exemplet ett värde för gender för att måla ut figurerna i bilden. En if-sats i draw-metoden är ett tips:p
+                    </p> 
+                    <canvas id='gender' width="100" height="100" class="bonuscanvas"></canvas>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="subject">
+            <div class="explanation">
+                <h2>Uppdatera bilder med hjälp av requestAnimationFrame</h2>
+                <p>
+                    I det här exemplet ska vi få en boll att studsa upp och ned. 
+                    För att uppnå detta skapar vi ett litet objekt: boll. 
+                    Objektet kommer som i tidigare exempel ha en draw-metod. 
+                    Vi kommer loopa den metoden samtidigt som vi uppdaterar bollens position för att få det att se ut som att bollen rör sig över canvasen.
+                </p>
+            </div>
+            <hr>
+            <div class="col-container">
+                <div class="col">
+                        <p>Kod:</p>
+                        <textarea spellcheck="false" class="code codefield" rows="45">
+animationreference = document.getElementById('animationcanvas').getContext('2d');
+
+function Boll(x, y, xv, yv, r, color){
+    this.x = x;
+    this.y = y;
+    this.xv = xv;
+    this.yv = yv;
+    this.r = r;
+    this.color = color;
+    this.move = function(){
+        this.x += this.xv;
+        this.y += this.yv;
+        if (this.y>=150-this.r){
+            this.y = 150-this.r;
+            this.yv = this.yv*(-1); //studsfaktor
+        } else {
+            this.yv += .1; //gravitationsfaktor
+        }
+        if (this.x>300-this.r){
+            this.x = 300-this.r;
+            this.xv*=(-1);
+        }
+        if (this.x&lt;this.r){
+            this.x = this.r;
+            this.xv*=(-1);
+        }
+    }
+    this.draw = function(){
+        animationreference.beginPath();
+        animationreference.arc(this.x, this.y, this.r, 0, 2*Math.PI);
+        animationreference.fillStyle = this.color;
+        animationreference.fill();
+    }
+}
+let boll = new Boll(20,100,1,0,5,'blue');
+animate();
+
+function animate(){
+    animationreference.clearRect(0,0,300,200);
+    boll.draw();
+    boll.move();
+
+    //anropar animate när all kod i animate har körts klart
+    currentid = requestAnimationFrame(animate);
+}
+                        </textarea>
+                        <button id="b4" class="runcode">Kör kod</button>
+
+                </div>
+                <div class="result col">
+                    <p>Resultat:</p>
+                    <canvas class="border" id="animationcanvas"></canvas>
+                </div>
+            </div>
+            <hr class="clearfix">
+            <div class="explanation">
+                <p>
+                    Objektet boll har två metoder: move och draw. move uppdaterar bollens position och draw målar bollen på canvasen. Det intressanta i det här exemplet är dock requestAnimationFrame och clearRect.
+                </p>
+                <p>
+                    requestAnimationFrame tar en funktion - i det här fallet animate - som argument och kör funktionens innehåll 60 gånger per sekund. Den har ungefär samma användning som setIntervall men visar inte nästa frame förrän all kod är körd.
+                </p>
+                <p>
+                    clearRect suddar ut en yta ur canvasen. Testa gärna att kommentera bort raden med clearRect för att se varför detta är nödvändigt.
+                </p>
+                <button id='4' class='bonus'>
+                    Tryck här för bonus level!
+                </button>
+                <div id='challenge4' class='challenge'>
+                    <p>
+                        Kombinera vad du har lärt dig:p
+                    </p> 
+                    <canvas id='movingstuff' width="300" height="150" class="bonuscanvas"></canvas>
+                </div>
+            </div>
+
+        </section>
+
+    </div>
+    <audio src="audio/bell.mp3" id="bellsound"></audio>
+    <audio src="audio/runcode.mp3" id="runcodesound"></audio>
+    <footer>
+            <p>Copyright &copy; 2019 &bull; <a href="https://www.linkedin.com/in/frida-schoultz-683162172/" target = _blank>Frida,</a> <a href="https://www.linkedin.com/in/ellinor-vase-38075716b/" target = _blank> Ellinor,</a> <a href="https://www.linkedin.com/in/anna-zetterstr%C3%B6m-585259b0/" target = _blank>Anna,</a> <a href="https://www.linkedin.com/in/niklas-silfverhielm-58554116b/" target = _blank>Niklas</a></p>
+    </footer>
+
+
+    <script src="javascript.js"></script>
+    <script src="evilscript.js"></script>
+</body>
+
+</html>

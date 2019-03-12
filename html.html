@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Old+Standard+TT" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Old+Standard+TT" rel="stylesheet">
+
+</head>
+
+<body>
+    <a href="#top"><img class="img" src="./images/html.png" alt="html"></a>
+    <h1 class="FTH">Frontend Tutorials</h1>
+    <input type="checkbox" id="burgerbutton"> <label class="burgermenu" for="burgerbutton">&#9776;</label>
+
+    <nav  class="htmlnav nav-gradient" id="burgermenu">
+        <a href="./index.html">Hem</a> &bull;
+        <a href="./adobex.html">Adobe Xd</a> &bull;
+        <a class="active" href="./html.html">HTML5</a> &bull;
+        <a href="./css.html">CSS</a> &bull;
+        <a href="./javascript.html">Javascript</a>
+    </nav>
+
+    <div class="main-content">
+        <h1>HTML5 - Tutorial</h1>
+        <h2>Hyper Text Markup Language</h2>
+        <hr>
+        <br>
+        <p>Här kommer vi gå igenom olika tutorials för hur man skriver HTML5 koder. HTML5 är den senaste standarden för
+            märkspråken HTML och XHTML och står för Hyper Text Markup Language som är det språket som används
+            för att bygga upp strukturen på hemsidor. Det så kallade HTML elementen är det som är
+            grundstenarna för att kunna bygga en webbsida i HTML. Dom karaktiseras genom taggar (&lt;&gt;) som skrivs
+            till
+            vänster och höger om elementet. HTML taggar markerar och definerar innehållet så att t.ex. rubriker och
+            texter skall synas i webbläsarens fönster, utan att elementens taggar syns. </p>
+
+        <div class="code border">
+            <h3>HTML grundstruktur </h3>
+            &lt;!DOCTYPE html&gt;
+            &lt;html lang="sv"&gt;
+
+            &lt;head&gt;
+                &lt;meta charset="UTF-8"&gt;
+                &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                &lt;meta http-equiv="X-UA-Compatible" content="ie=edge"&gt;
+                &lt;title&gt;Sido titel&lt;/title&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+
+            <span class="link-style">&lt;p&gt;Här skriver du den kod som du vill skall synas på sidan &lt;/p&gt; </span>
+
+            &lt;/body&gt;
+            &lt;/html&gt;
+        </div>
+
+        <section class="subject">
+            <div class="explanation">
+                <h2>Exempel 1 - Rubriker</h2>
+                <p>
+                    Rubriker i olika storlekar som man kan använda sig av i HTML, här använder vi oss av h1 upp till
+                    h6.
+                </p>
+            </div>
+            <hr>
+            <div class="col-container">
+                <div class="padding col padding-ex1">
+                    <p>
+                        &lt;h1&gt;Detta är en h1 rubrik &lt;/h1 &gt; <br>
+
+                        &lt;h2&gt;Detta är en h2 rubrik &lt;/h2 &gt; <br>
+
+                        &lt;h3&gt;Detta är en h3 rubrik &lt;/h3 &gt; <br>
+
+                        &lt;h4&gt;Detta är en h4 rubrik &lt;/h4 &gt; <br>
+
+                        &lt;h5&gt;Detta är en h5 rubrik &lt;/h5 &gt; <br>
+
+                        &lt;h6&gt;Detta är en h6 rubrik &lt;/h6 &gt;
+                    </p>
+                </div>
+
+                <div class="result padding col">
+
+
+                    <h1>Detta är en h1 rubrik</h1>
+
+                    <h2>Detta är en h2 rubrik</h2>
+
+                    <h3>Detta är en h3 rubrik</h3>
+
+                    <h4>Detta är en h4 rubrik</h4>
+
+                    <h5>Detta är en h5 rubrik</h5>
+
+                    <h6>Detta är en h6 rubrik</h6>
+
+                </div>
+            </div>
+
+
+            <br class="clearfix">
+        </section>
+
+        <section class="subject">
+            <div class="explanation">
+                <h2>Exempel 2 -Textformatering och fysiska element</h2>
+                <p>
+                    Här kommer vi visa olika exempel på vad man kan skriva i ett HTML dokument.
+                </p>
+            </div>
+            <hr>
+            <div class="col-container">
+                <div class=" padding col">
+
+                    <p>&lt;p&gt;Detta är text i p-taggar, som man vanligtvis använder sig av när man skriver
+                        text&lt;/p&gt;</p>
+                    <p>&lt;b&gt;Detta är en fet text&lt;/b &gt;</p>
+                    <p>&lt;i&gt;Detta är kursiv text&lt;/i &gt;</p>
+                    <p>&lt;small&gt;Detta är lite mindre text&lt;/small &gt;</p>
+                    <p>&lt;u&gt;Detta är understruken text&lt;/u &gt;</p>
+                    <p>&lt;s&gt;Detta är genomstruken text&lt;/s &gt;</p>
+                    <p>&lt;br&gt;br bryter en rad och skapar mellanrum</p>
+                    <p>&lt;hr&gt;hr skapar ett långt streck sopm bryter av element</p>
+                    <p>Detta är&lt;em&gt;en betoning&lt;/em &gt; med kursiv text</p>
+                    <p>Detta är&lt;strong&gt;en betoning&lt;/strong &gt; med fet text</p>
+                    <p>
+                        &lt;mark&gt;Detta markerar en text&lt;/mark &gt; och kan också &lt;mark&gt;markera&lt;mark&gt;ett ord
+                    </p>
+                    <p>
+                        &lt;blockquote&gt;Här kan man skriva ett vackert citat om någon/något&lt;/blockquote&gt;
+                    </p>
+                    <p>&lt;q&gt;Du kan också skriva ett citat på detta sätt&lt;/q &gt;</p>
+                    <p>Text med upphöjt i som t.ex. Area: 15m&lt;sup&gt;2&lt;/sup &gt;</p>
+                    <p>Text med nedsänkt i som t.ex. Vatten: 15m&lt;sub&gt;2&lt;/sub &gt;0</p>
+
+
+
+                </div>
+
+                <div class="result padding col">
+                    <p>Detta är text i p-taggar, som man vanligtvis använder sig av när man skriver texter</p>
+                    <p><b>Detta är en fet text</b></p>
+                    <p><i>Detta är kursiv text</i></p>
+                    <p><small>Detta är lite mindre text</small></p>
+                    <p><u>Detta är understruken text</u></p>
+                    <p><s>Detta är genomstruken text</s></p>
+                    <br>
+                    <p>br bryter en rad</p><br>
+                    <hr>
+                    <p>hr skapar ett långt streck som bryter av elementen</p>
+                    <p>Detta är <em>en betoning</em> med kursiv text</p>
+                    <p>Detta är <strong>en betoning</strong> med fet text </p>
+                    <p> <mark>Detta markerar en text</mark> och kan också <mark>markera</mark> ett ord</p>
+
+                    <blockquote>"Här kan du skriva ett vackert citat om något eller någon."</blockquote>
+
+                    <p><q>Du kan också skriva ett citat på detta vis</q></p>
+                    <p>Text med upphöjt i som t.ex. Area: 15m<sup>2</sup> </p>
+                    <p>Text med nedsänkt i som t.ex. Vatten: H<sub>2</sub>O</p>
+                </div>
+            </div>
+
+
+            <br class="clearfix">
+
+        </section>
+
+        <section class="subject">
+            <div class="explanation">
+                <h2>Exempel 3 - Listor,punktlistor, ordnade (ol) och oordnade (ul) listor</h2>
+                <p>
+                    Här visar vi olika sätt du kan strukturera upp listor på i ett HTML dokument. Notera även att här
+                    har vi lagt in rubriker i form av
+                    &lt;h4&gt; och &lt;h3&gt; och även &lt;br&gt; och &lt;hr&gt;. Dessa är ej nödvändiga när du skapar
+                    listor men här har vi gjort detta för att
+                    man på ett tydligt sätt skall se vad som står.
+                </p>
+            </div>
+            <hr>
+            <div class="col-container">
+                <div class="padding col padding-ex2">
+                    <p><b>Här visas en oordnad lista i punkform </b></p>
+                    <p>&lt;ul&gt;</p>
+
+                    <p>&lt;li&gt;Här visas&lt;/li&gt;</p>
+                    <p>&lt;li&gt;en oordnad&lt;/li&gt;</p>
+                    <p> &lt;li&gt;lista&lt;/li&gt;</p>
+                    <p>&lt;/ul&gt;</p>
+                    <hr>
+
+                    <p><b>Här visas en ordnad lista som kan visas med både nummer och bokstäver</b></p>
+                    <p> &lt;ol&gt;</p>
+                    <p>&lt;li&gt;Rita mockup&lt;/li&gt;</p>
+                    <p>&lt;li&gt;Designa hemsidan med HTML, CSS och JS&lt;/li&gt;</p>
+                    <p>&lt;li&gt;Redovisa resultatet&lt;/li&gt;</p>
+                    <p>&lt;/ol&gt;</p>
+
+                    <p><b>Om du vill hoppa nummerordningen i en numrerad lista eller t.ex. börja från nummer 10</b></p>
+                    <p>&lt;ol start="10"&gt;</p>
+                    <p>&lt;li&gt;Lär dig agila arbetsmetoder&lt;/li&gt;</p>
+                    <p>&lt;li&gt;Lär dig Github &lt;/li&gt;</p>
+                    <p>&lt;/ol&gt;</p>
+
+                    <h3><b>En lista i omvänd sifferordning</b></h3>
+                    <p>&lt;ol reversed="reversed"&gt;</p>
+                    <p>&lt;li&gt;Lär dig HTML&lt;/li&gt;</p>
+                    <p>&lt;li&gt;Lär dig CSS &lt;/li&gt;</p>
+                    <p>&lt;li&gt;Lär dig JS&lt;/li&gt;</p>
+                    <p>&lt;/ol&gt;</p>
+                    <hr>
+
+                    <p><b>Ändra typ av lista till:</b></p>
+                    <p><b>Små bokstäver</b></p>
+                    <p>&lt;ol type="a"&gt; </p>
+                    <p>&lt;li&gt;Lär dig HTML&lt;/li&gt;</p>
+                    <p>&lt;li&gt;Lär dig CSS &lt;/li&gt;</p>
+                    <p>&lt;li&gt;Lär dig JS&lt;/li&gt;</p>
+                    <p>&lt;/ol&gt;</p>
+
+                    <p><b>Stora bokstäver</b></p>
+                    <p>&lt;ol type="A"&gt; </p>
+                    <p>&lt;li&gt;Lär dig Agila arbetsmetoder&lt;/li&gt;</p>
+                    <p>&lt;li&gt;Lär dig Github &lt;/li&gt;</p>
+                    <p>&lt;li&gt;Lär dig Trello&lt;/li&gt;</p>
+                    <p>&lt;/ol&gt;</p>
+
+                    <p><b>Romerska siffror</b></p>
+                    <p>&lt;ol type="I"&gt; </p>
+                    <p>&lt;li&gt;Lär dig pusha upp till github&lt;/li&gt;</p>
+                    <p>&lt;li&gt;Lär dig att commita &lt;/li&gt;</p>
+                    <p>&lt;li&gt;Lär dig merga ihop arbeten&lt;/li&gt;</p>
+                    <p>&lt;/ol&gt;</p>
+
+                    <p><b>Stora siffror</b></p>
+                    <p>&lt;ol type="1"&gt; </p>
+                    <p>&lt;li&gt;Lär dig ha tålamod&lt;/li&gt;</p>
+                    <p>&lt;li&gt;Lär dig att skratta&lt;/li&gt;</p>
+                    <p>&lt;li&gt;Lär dig att ha roligt påvägen&lt;/li&gt;</p>
+                    <p>&lt;/ol&gt;</p>
+                    <p>&lt;hr&gt;</p>
+
+                    <p><b>Nästlade listor, där en lista kan innehålla ytterligare en lista</b></p>
+                    <p>&lt;ul&gt;</p>
+                    <p>&lt;li&gt;Kaffe&lt;/li&gt;</p>
+                    <p>&lt;li&gt;Te</p>
+                    <p>&lt;ul&gt;</p>
+                    <p>&lt;li&gt;Svart te&lt;/li&gt;</p>
+                    <p>&lt;li&gt;Grönt te&lt;/li&gt;</p>
+                    <p>&lt;li&gt;Rött te&lt;/li&gt;</p>
+                    <p>&lt;/ul&gt;</p>
+                    <p>&lt;/li&gt;</p>
+                    <p>&lt;li&gt;Caffe-latte&lt;/li&gt;</p>
+                    <p>&lt;li&gt;Cappuccino&lt;/li&gt;</p>
+                    <p>&lt;/ul&gt;</p>
+
+
+
+                </div>
+
+                <div class="result padding col">
+                    <h4>Här visas en oordnad lista i punkform</h4>
+                    <ul>
+                        <li>Här visas</li>
+                        <li>en oordnad</li>
+                        <li>lista</li>
+                    </ul>
+
+                    <hr>
+                    <br>
+
+                    <h4>Här visas en numrerad lista</h4>
+                    <ol>
+                        <li>Rita mockup</li>
+                        <li>Designa hemsidan med HTML, CSS och JS</li>
+                        <li>Redovisa resultatet</li>
+                    </ol>
+
+                    <br>
+
+                    <h4>Om du vill hoppa nummerordningen i en numrerad lista eller t.ex. börja från nummer 10</h4>
+                    <ol start="10">
+                        <li>Lär dig agila arbetsmetoder</li>
+                        <li>Lär dig Github</li>
+                    </ol>
+
+                    <br>
+
+                    <h4>En lista i omvänd sifferordning</h4>
+                    <ol reversed='reversed'>
+                        <li>Lär dig HTML</li>
+                        <li>Lär dig CSS</li>
+                        <li>Lär dig JS</li>
+                    </ol>
+
+                    <hr>
+                    <br>
+
+                    <h3>Ändra typ av lista till:</h3>
+                    <br>
+                    <h4>Små bokstäver</h4>
+                    <ol type="a">
+                        <li>Lär dig HTML</li>
+                        <li>Lär dig CSS</li>
+                        <li>Lär dig JS</li>
+                    </ol>
+
+                    <br>
+
+                    <h4>Stora bokstäver</h4>
+                    <ol type="A">
+                        <li>Lär dig Agila arbetsmetoder</li>
+                        <li>Lär dig Github </li>
+                        <li>Lär dig Trello</li>
+                    </ol>
+
+                    <br>
+
+                    <h4>Romerska siffror</h4>
+                    <ol type="I">
+                        <li>Lär dig pusha upp till github</li>
+                        <li>Lär dig att commita</li>
+                        <li>Lär dig merga ihop arbeten</li>
+                    </ol>
+
+                    <br>
+
+                    <h4>Stora siffror</h4>
+                    <ol type="1">
+                        <li>Lär dig ha tålamod</li>
+                        <li>Lär dig att skratta</li>
+                        <li>Lär dig att ha roligt påvägen</li>
+                    </ol>
+
+                    <hr>
+                    <br>
+
+                    <h4>Nästlade listor, där en lista kan innehålla ytterligare en lista</h4>
+                    <ul>
+                        <li>Kaffe</li>
+                        <li>Te
+                            <ul>
+                                <li>Svart te</li>
+                                <li>Grönt te</li>
+                                <li>Rött te</li>
+                            </ul>
+                        </li>
+                        <li>Caffe-latte</li>
+                        <li>Cappuccino</li>
+                    </ul>
+
+
+                </div>
+            </div>
+
+            <br class="clearfix">
+        </section>
+
+        <section class="subject">
+            <div class="explanation">
+                <h2>Exempel 4 - HTML formulär</h2>
+                <p>Här visar vi olika sätt du kan skapa formulär i HTML.</p>
+                <p>HTML elementet &lt;form&gt; definierar ett HTML format som samlar in användarinmatning av olika slag.</p>
+                <p>Det viktigaste form-elementet är &lt;input&gt; elementet som används för att specifiera en inmatning av data från användaren så som t.ex. användarnamn eller lösenord.</p>
+                <p>Man kan placera olika typer av attribut i elementet input så som t.ex. text, submit knapp eller radio knappar.</p>
+                <p>Med elementet &lt;select&gt; så skapas en drop-down lista där elementet &lt;option&gt; skapar olika alternativ man kan välja emellan</p>
+                <p>Med HTML elementet &lt;textarea&gt; skapas en inmatningsruta som man kan skriva i.</p>
+                <p>Med HTML elementet &lt;fieldset&gt; så grupperas relaterade element till en form och skapar en box runt omkring. &lt;legend&gt; ger en text i ramen av den boxen </p>
+                <p>Elementet &lt;label&gt; definerar en beteckning för elementen &lt;button&gt;, &lt;input&gt;,
+                    &lt;meter&gt;, &lt;output&gt;, &lt;progress&gt;, &lt;select&gt;, och &lt;textarea&gt;.</p>
+            </div>
+            <hr>
+            <div class="col-container">
+                <div class="padding padding-ex2 col">
+                    <h4>Ett standardformulär med två rutor för namn och en knapp för att skicka</h4>
+                    <p>&lt;form&gt;action="backend.php" method="POST"&gt;</p>
+                    <p>
+                        Förnamn: &lt;input&gt;type="text" name="firstname"&gt;
+                    </p>
+                    <p>
+                        Efternamn: &lt;input&gt;type="text" name="firstname"&gt;
+                    </p>
+                    <p>
+                        &lt;input type="submit" value="Skicka" name="knapp"&gt;
+                    </p>
+                    <p>&lt;/form&gt;</p>
+                    <br>
+                    <h4>Ett standardformulär för inloggning</h4>
+                    <p>&lt;form action="action_page.php" method="POST"&gt;</p>
+                    <p>
+                        Användarnamn: &lt;input type="text" name="username" size="15" maxlength="15"&gt;
+                    </p>
+                    <p>
+                        &lt;input type="text" name="username" size="15" maxlength="15"&gt;
+                    </p>
+                    <p>
+                        Lösenord: &lt;input type="password" name="password" size="15" maxlength="15"&gt;
+                    </p>
+                    <p>&lt;input type="submit" value="Logga in"&gt;</p>
+                    <p>&lt;/form&gt;</p>
+                    <br>
+                    <h4>Textruta där man kan skriva text i och sedan skicka</h4>
+                    <p>&lt;form action="backend.php" method="POST" &gt;</p>
+                    <p>
+                        Skriv gärna en kommentar här: &lt;textarea name="comments" cols="30" rows="10"&gt; Här matas meddelande in&lt;/textarea&gt;
+                    </p>
+                    <p>&lt;input type="submit" value="Skicka" name="messagebutton"&gt;</p>
+                    <p>&lt;/form&gt;</p>
+                    <br>
+                    <h3>Radioknappar</h3>
+                    <h4>Med radioknappar kan man bara välja ett av alternativen</h4>
+                    <p>&lt;form action="backend.php" method="POST"&gt;</p>
+                    <p>Vilken ögonfärg har du:</p>
+                    <p>Bruna</p>
+                    <p>&lt;input type="radio" name="color" value="bruna" &gt;</p>
+                    <p>Nötbruna</p>
+                    <p>&lt;input type="radio" name="color" value="nötbruna" &gt;</p>
+                    <p>Gråa</p>
+                    <p>&lt;input type="radio" name="color" value="gråa" &gt;</p>
+                    <p>Gröna:</p>
+                    <p>&lt;input type="radio" name="color" value="gröna" &gt;</p>
+                    <p>Blåa</p>
+                    <p>&lt;input type="radio" name="color" value="blåa" &gt;</p>
+                    <p>Olikfärgade ögon</p>
+                    <p>&lt;input type="radio" name="color" value="olika" &gt;</p>
+                    <p>&lt;/form&gt;</p>
+                    <br>
+                    <h3>Kryssrutor (checkbox)</h3>
+                    <h4>Här kan man kryssa i flera alternativ</h4>
+                    <p>&lt;form action="checkbox.php" method="POST"&gt;</p>
+                    <p>Kryssa i vilken/vilka allergier du har:</p>
+                    <p>Pollenallergi</p>
+                    <p>&lt;input type="checkbox" name="Service" value="pollen" &gt;</p>
+                    <p>Pälsallergi</p>
+                    <p>&lt;input type="checkbox" name="Service" value="päls" &gt;</p>
+                    <p>Matallergi</p>
+                    <p>&lt;input type="checkbox" name="Service" value="matrial" &gt;</p>
+                    <p>Kontaktallergi(hud)</p>
+                    <p>&lt;input type="checkbox" name="Service" value="kontakt" &gt;</p>
+                    <p>&lt;/form&gt;</p>
+                    <br>
+                    <h3>Fieldset</h3>
+                    <h4>Används för att gruppera relaterade element i en form och skapar en box runt de relaterade elementen</h4>
+                    <p>&lt;form action="fieldset.php" method="POST" &gt;</p>
+                    <p>&lt;fieldset&gt;</p>
+                    <p>&lt;legend&gt;Kontakta mig&lt;/legend&gt;</p>
+                    <p>&lt;label for="fieldsetfirstname"&gt;Förnamn: &lt;/label&gt;</p>
+                    <p>&lt;input type="text" name="firstname" id="fieldsetfirstname" required &gt;</p>
+                    <p>&lt;label for="fieldsetlastname" &gt;Efternamn: &lt;/label&gt;</p>
+                    <p>&lt;input type="text" name="lastname" id="fieldsetlastname" required &gt;</p>
+                    <br>
+                    <p>&lt;label for="fieldsetemail"&gt;Email: &lt;/label&gt;</p>
+                    <p>&lt;input type="email" name="email" id="fieldsetemail" required &gt;</p>
+                    <br>
+                    <p>&lt;input type="submit" value="Skicka"&gt;</p>
+                    <p>&lt;/fieldset&gt;</p>
+                    <p>&lt;/form&gt;</p>
+                    <br>
+                    <hr>
+                    <br>
+                    <h3>Drop-down lista</h3>
+                    <h4>En lista som du kan trycka på för att få en nedåtgående lista med alternativ att välja emellan</h4>
+                    <br>
+                    <p>&lt;form action="drop_down_list.php" method="POST"&gt;
+                        <p>Välj den storlek du vill ha</p>
+                        <p>&lt;select name="device"&gt;</p>
+                        <p>&lt;option &gt; option value="1"&gt;Välj Storlek&lt;/option&gt;</p>
+                        <p>&lt;option &gt; option value="2"&gt;X-Small&lt;/option&gt;</p>
+                        <p>&lt;option &gt; option value="3"&gt;Small&lt;/option&gt;</p>
+                        <p>&lt;option &gt; option value="4"&gt;Medium&lt;/option&gt;</p>
+                        <p>&lt;option &gt; option value="5"&gt;Large&lt;/option&gt;</p>
+                        <p>&lt;option &gt; option value="6"&gt;X-Large&lt;/option&gt;</p>
+                        <p>&lt;/select&gt;</p>
+                        <p>&lt;/form&gt; </p>
+                        <br>
+                        <hr>
+                        <br>
+                        <h4>Datumfält</h4>
+                        <p>&lt;form action="date.php"&gt;</p>
+                        <p>&lt;label for="Departure"&gt;Välj ett datum: &lt;/label&gt;</p>
+                        <p>&lt;input input type="date" name="Departure" id="Departure"&gt;</p>
+                        <p>&lt;input type="submit" value="Skicka"&gt;</p>
+                        <p>&lt;/form&gt;</p>
+
+
+
+                        <br>
+                        <hr>
+                        <br>
+
+                        <h3>Sökfält</h3>
+                        <p>
+                            Två exempel på hur man kan infoga sökfält i html. I den första rutan går det att skriva och trycka enter direkt. I den andra så finns det två knappar; en sök-knapp och en rensa-knapp. Det finns även ett kryss direkt i denna sökruta som tar bort texten i fältet.
+                        </p>
+
+                        <p>&lt;form action="searchfield.php"&gt;</p>
+                        <p>&lt;input name="searchtext" type="text"&gt;</p>
+                        <p>&lt;input type="search" name="search" placeholder="Sök..."&gt;</p>
+                        <p>&lt;input type="submit" value="Sök"&gt;</p>
+                        <p>&lt;input type="reset" value="Rensa" &gt;</p>
+                        <p>&lt;/form&gt;</p>
+                        <br>
+                        <hr>
+                        <br>
+                        <h4>Ladda upp en fil</h4>
+                        <p>På detta sätt kan du göra det möjligt att ladda upp filer via html</p>
+                        <p>&lt;form action='uploadfile.php' method='POST'&gt;</p>
+                        <p>Ladda upp en fil här:</p>
+                        <p>&lt;input type="file" name="song"&gt;</p>
+                        <p>&lt; input type="submit" value="Ladda upp"&gt;</p>
+                        <p>&lt;/form&gt;</p>
+
+                </div>
+
+                <div class="result padding padding-ex1 col">
+                    <h4>Ett standardformulär med två rutor för namn och en knapp för att skicka</h4>
+                    <br>
+                    <form action="backend.php" method="POST">
+                        <p>
+                            Förnamn: <input type="text" name="firstname">
+                        </p>
+                        <br>
+
+                        <p>
+                            Efternamn: <input type="text" name="lastname">
+                        </p>
+                        <br>
+
+                        <input type="submit" value="Skicka" name="knapp">
+                    </form>
+                    <br>
+                    <hr>
+                    <br>
+
+                    <h4>Ett standardformulär för inloggning</h4>
+
+                    <form action="action_page.php" method="POST">
+                        <p> Användarnamn: <br>
+                            <input type="text" name="username" size="15" maxlength="15">
+                        </p>
+                        <p> Lösenord: <br>
+                            <input type="password" name="password" size="15" maxlength="15">
+                        </p>
+
+                        <p>
+                            <input type="submit" value="Logga in">
+                        </p>
+                    </form>
+                    <br>
+                    <hr>
+                    <br>
+
+                    <h4>Textruta där man kan skriva text i och sedan skicka</h4>
+                    <form action="backend.php" method="POST">
+                        <p>Skriv gärna en kommentar här:</p>
+                        <textarea name="comments" cols="30" rows="10">Här matas meddelande in</textarea> <br>
+                        <input type="submit" value="Skicka" name="knapp">
+                    </form>
+                    <br>
+                    <hr>
+                    <br>
+                    <h3>Radioknappar</h3>
+                    <h4>Med radioknappar kan man bara välja ett av alternativen</h4>
+                    <form action="backend.php" method="POST">
+                        <p>
+                            Vilken ögonfärg har du:
+                        </p>
+                        <p>Bruna</p>
+                        <input type="radio" name="color" value="bruna">
+                        <p>Nötbruna</p>
+                        <input type="radio" name="color" value="nötbruna">
+                        <p>Gråa</p>
+                        <input type="radio" name="color" value="gråa">
+                        <p>Gröna</p>
+                        <input type="radio" name="color" value="gröna">
+                        <p>Blåa</p>
+                        <input type="radio" name="color" value="blåa">
+                        <p>Olikfärgade ögon</p>
+                        <input type="radio" name="genre" value="olika">
+                    </form>
+                    <br>
+                    <hr>
+                    <br>
+                    <h3>Kryssrutor (checkbox)</h3>
+                    <h4>Här kan man kryssa i flera alternativ</h4>
+                    <form action="checkbox.php" method="POST">
+                        <p>
+                            Kryssa i vilken(vilka) allergier du har:
+                        </p>
+                        <p>Pollenallergi</p>
+                        <input type="checkbox" name="Service" value="pollen">
+                        <p>Pälsallergi</p>
+                        <input type="checkbox" name="Service" value="päls">
+                        <p>Matallergi</p>
+                        <input type="checkbox" name="Service" value="mat">
+                        <p>Kontaktallergi (hud)</p>
+                        <input type="checkbox" name="Service" value="kontakt">
+                    </form>
+                    <br>
+                    <hr>
+                    <br>
+                    <h3>Fieldset</h3>
+                    <h4>Används för att gruppera relaterade element i ett formulär och skapar en box runt elementen.</h4>
+                    <form action="fieldset.php" method="POST">
+                        <fieldset>
+                            <legend>Kontakta mig</legend>
+                            <label for="fieldsetfirstname">Förnamn:</label><br>
+                            <input type="text" name="firstname" id="fieldsetfirstname" required><br>
+                            <label for="fieldsetlastname">Efternamn:</label><br>
+                            <input type="text" name="lastname" id="fieldsetlastname" required><br>
+                            <label for="fieldsetemail">Email:</label><br>
+                            <input type="email" name="email" id="fieldsetemail" required><br>
+                            <input type="submit" value="Skicka">
+                        </fieldset>
+                    </form>
+                    <br>
+                    <h3>Drop-down-lista</h3>
+                    <h4>En lista som du kan trycka på för att få en nedåtgående lista med alternativ att välja emellan.</h4>
+
+                    <form action="drop_down_list.php" method="POST">
+                        <p>Välj den storlek du vill ha:</p>
+                        <select name="device">
+                            <option value="1">Välj Storlek</option>
+                            <option value="2">X-Small</option>
+                            <option value="3">Small</option>
+                            <option value="4">Medium</option>
+                            <option value="5">Large</option>
+                            <option value="6">X-Large</option>
+                        </select>
+                    </form>
+                    <br>
+                    <hr>
+                    <br>
+                    <h4>Datumfält</h4>
+                    <form action="date.php" method="POST">
+                        <label for="Departure">Välj ett datum:</label><br>
+                        <input type="date" name="Departure" id="Departure"><br>
+                        <input type="submit" value="Skicka">
+
+                    </form>
+                    <br>
+                    <hr>
+                    <br>
+                    <h3>Sökfält</h3>
+                    <p>
+                        Två exempel på hur man kan infoga sökfält i html. I den första rutan går det att skriva och trycka enter direkt. I den andra så finns det två knappar; en sök-knapp och en rensa-knapp. Det finns även ett kryss direkt i denna sökruta som tar bort texten i fältet.
+                    </p>
+                    <form action="searchfield.php" method="POST">
+                        <input type="text" name="searchtext"><br><br>
+                        <input type="search" name="search" placeholder="Sök...">
+                        <input type="submit" value="Sök">
+                        <input type="reset" value="Rensa">
+                    </form>
+                    <br>
+                    <hr>
+                    <br>
+
+                    <h4>Ladda upp en fil</h4>
+                    <p>På detta sätt kan du göra det möjligt att ladda upp filer via html</p>
+                    <form action='uploadfile.php' method="POST">
+                        <p>Ladda upp en fil här:</p>
+                        <input type="file" name="song"><br><br>
+                        <input type="submit" value="Ladda upp">
+                    </form>
+                </div>
+            </div>
+
+
+            <br class="clearfix">
+        </section>
+
+
+    </div>
+    <footer>
+            <p>Copyright &copy; 2019 &bull; <a href="https://www.linkedin.com/in/frida-schoultz-683162172/" target = _blank>Frida,</a> <a href="https://www.linkedin.com/in/ellinor-vase-38075716b/" target = _blank> Ellinor,</a> <a href="https://www.linkedin.com/in/anna-zetterstr%C3%B6m-585259b0/" target = _blank>Anna,</a> <a href="https://www.linkedin.com/in/niklas-silfverhielm-58554116b/" target = _blank>Niklas</a></p>
+    </footer>
+    
+
+
+
+
+</body>
+
+
+            
+</html>
